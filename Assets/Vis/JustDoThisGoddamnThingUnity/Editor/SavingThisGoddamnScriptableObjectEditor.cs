@@ -4,7 +4,11 @@ using Vis.JustSaveThisGoddamnData;
 namespace Vis.JustDoThisGoddamnThingUnity
 {
     /// <summary>
-    /// Just inherit this class for your scriptableObject type to make it goddman savable:)
+    /// Just derive this class for your scriptableObject editor to make it goddman savable:)
+    /// 
+    /// Use like this:
+    /// [CustomEditor(typeof(*Your ScriptableObject-derived type name *))]
+    /// public class *Your ScriptableObject-derived type name* : SavingThisGoddamnScriptableObjectEditor
     /// </summary>
     public class SavingThisGoddamnScriptableObjectEditor : UnityEditor.Editor
     {
