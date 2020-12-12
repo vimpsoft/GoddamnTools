@@ -6,3 +6,4 @@
 !/Assets/VIS/**
 !/Assets/VimpSoft/**
 !.gitignore
+!LICENSE
