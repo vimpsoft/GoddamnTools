@@ -24,10 +24,12 @@ namespace VimpSoft.JustDoThisGoddamnThingUnity
             var ourPath = AssetDatabase.GUIDToAssetPath("6bd30f83b6164734685f670f95eb5e88");
             if (string.IsNullOrEmpty(ourPath))
             {
-                ourPath = AssetDatabase.FindAssets("SavingThisGoddamnScriptableObjectEditor.cs").Where(p => File.ReadAllText(p).Contains($"public static class {nameof(ThisGoddamnScriptableObjectSaverUtility)}")).FirstOrDefault();
+                ourPath = AssetDatabase.FindAssets("SavingThisGoddamnScriptableObjectEditor.cs").FirstOrDefault(p =>
+                    File.ReadAllText(p)
+                        .Contains($"public static class {nameof(ThisGoddamnScriptableObjectSaverUtility)}"));
                 if (string.IsNullOrEmpty(ourPath))
                 {
-                    throw new ApplicationException($"{nameof(ThisGoddamnScriptableObjectSaverUtility)}: isn't working! Damn...");
+                    throw new ApplicationException($"{nameof(ThisGoddamnScriptableObjectSaverUtility)} isn't working! Damn...");
                 }
             }
             var dummyInstance = ScriptableObject.CreateInstance(goddamnScriptableObject.GetType());
