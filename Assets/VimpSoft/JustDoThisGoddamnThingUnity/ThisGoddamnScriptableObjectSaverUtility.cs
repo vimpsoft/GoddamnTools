@@ -9,7 +9,7 @@ namespace VimpSoft.JustDoThisGoddamnThingUnity
 {
     /*
      * Saves ScriptableObjects via hacky way of writing new yaml
-     * into .asset file.
+     * into .asset file. Use with caution.
      */
     public static class ThisGoddamnScriptableObjectSaverUtility
     {
