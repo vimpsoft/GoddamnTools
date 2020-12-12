@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-namespace VimpSoft.JustDoThisGoddamnThingUnity
+namespace VimpSoft.GoddamnTools
 {
     /// <summary>
-    /// Just derive this class for your scriptableObject editor to make it goddman savable:)
+    /// Just derive this class for your scriptableObject editor to make it goddamn savable:)
     /// 
     /// Use like this:
     /// [CustomEditor(typeof(*Your ScriptableObject-derived type name *))]
