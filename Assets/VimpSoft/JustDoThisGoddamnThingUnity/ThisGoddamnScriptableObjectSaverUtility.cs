@@ -1,6 +1,7 @@
 ﻿#if UNITY_EDITOR
 using System;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -23,7 +24,11 @@ namespace VimpSoft.JustDoThisGoddamnThingUnity
             var ourPath = AssetDatabase.GUIDToAssetPath("6bd30f83b6164734685f670f95eb5e88");
             if (string.IsNullOrEmpty(ourPath))
             {
-                throw new ApplicationException($"{nameof(ThisGoddamnScriptableObjectSaverUtility)}: isn't working! Damn...");
+                ourPath = AssetDatabase.FindAssets("SavingThisGoddamnScriptableObjectEditor.cs").Where(p => File.ReadAllText(p).Contains($"public static class {nameof(ThisGoddamnScriptableObjectSaverUtility)}")).FirstOrDefault();
+                if (string.IsNullOrEmpty(ourPath))
+                {
+                    throw new ApplicationException($"{nameof(ThisGoddamnScriptableObjectSaverUtility)}: isn't working! Damn...");
+                }
             }
             var dummyInstance = ScriptableObject.CreateInstance(goddamnScriptableObject.GetType());
             EditorUtility.CopySerialized(goddamnScriptableObject, dummyInstance);
