@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Vis.JustSaveThisGoddamnData
+namespace VimpSoft.JustDoThisGoddamnThingUnity
 {
     /*
      * Saves ScriptableObjects via hacky way of writing new yaml

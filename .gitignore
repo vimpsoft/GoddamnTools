@@ -4,4 +4,5 @@
 !*/
 # Recursively allow files under subtree
 !/Assets/VIS/**
+!/Assets/VimpSoft/**
 !.gitignore

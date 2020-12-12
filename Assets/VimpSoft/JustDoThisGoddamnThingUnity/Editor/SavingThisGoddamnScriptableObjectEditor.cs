@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using Vis.JustSaveThisGoddamnData;
 
-namespace Vis.JustDoThisGoddamnThingUnity
+namespace VimpSoft.JustDoThisGoddamnThingUnity
 {
     /// <summary>
     /// Just derive this class for your scriptableObject editor to make it goddman savable:)
